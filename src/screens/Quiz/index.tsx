@@ -1,27 +1,20 @@
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-
 import {Container, Typography} from '../../components';
 import {Colors} from '../../config';
+import {useQuizCategories} from '../../hooks/apis/use-quiz-categories';
 
 const Quiz = () => {
+  const {data, error, loading} = useQuizCategories();
+
   return (
     <Container
       headerTitle="Hello, James"
       headerSubText="Let's test your knowledge"
       backIcon={false}>
-      <Typography>dsf</Typography>
+      <Typography mT={32} size={18} bold color={Colors.darkblue}>
+        Select Categories
+      </Typography>
     </Container>
   );
 };
 
 export default Quiz;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-});
