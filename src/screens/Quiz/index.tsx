@@ -1,12 +1,17 @@
+import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 
-import React from 'react';
+import {Container, Typography} from '../../components';
+import {Colors} from '../../config';
 
 const Quiz = () => {
   return (
-    <View style={styles.container}>
-      <Text>Quizz App</Text>
-    </View>
+    <Container
+      headerTitle="Hello, James"
+      headerSubText="Let's test your knowledge"
+      backIcon={false}>
+      <Typography>dsf</Typography>
+    </Container>
   );
 };
 
@@ -17,6 +22,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
   },
 });

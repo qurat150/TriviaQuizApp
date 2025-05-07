@@ -1,5 +1,5 @@
-import Logo from '../../assets/images/back-icon.svg';
+import BackIcon from '../../assets/images/back-icon.svg';
 
 export const SVGS = {
-  Logo,
+  BackIcon,
 };

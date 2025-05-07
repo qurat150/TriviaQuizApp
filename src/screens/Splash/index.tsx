@@ -1,11 +1,11 @@
-import {StyleSheet, Text, View} from 'react-native';
-
 import React from 'react';
+import {StyleSheet, View} from 'react-native';
+import {Typography} from '../../components';
 
 const Splash = () => {
   return (
     <View style={styles.container}>
-      <Text>Trivia Quizz App</Text>
+      <Typography bold>Trivia Quizz App</Typography>
     </View>
   );
 };
