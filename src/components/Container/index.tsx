@@ -24,6 +24,7 @@ const Container: React.FC<ContainerProps> = ({
   handleBackIcon = () => {},
   scrollViewRef = null,
   onScroll = () => {},
+  scrollView = false,
 }) => {
   const handleBackPress = useCallback(() => {
     NavigationService.goBack();
@@ -58,23 +59,33 @@ const Container: React.FC<ContainerProps> = ({
         )}
       </View>
 
-      <KeyboardAvoidingView
-        style={{flex: 1}}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
-          contentContainerStyle={contentContainerStyle}
-          keyboardShouldPersistTaps="handled"
-          scrollEnabled={true}
-          ref={scrollViewRef}
-          onScroll={onScroll}
+      {scrollView ? (
+        <KeyboardAvoidingView
+          style={{flex: 1}}
+          behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
+          <ScrollView
+            showsVerticalScrollIndicator={false}
+            contentContainerStyle={contentContainerStyle}
+            keyboardShouldPersistTaps="handled"
+            scrollEnabled={true}
+            ref={scrollViewRef}
+            onScroll={onScroll}
+            style={[
+              styles.contentContainer,
+              {paddingHorizontal: Metrix.HorizontalSize(pH)},
+            ]}>
+            {children}
+          </ScrollView>
+        </KeyboardAvoidingView>
+      ) : (
+        <View
           style={[
             styles.contentContainer,
             {paddingHorizontal: Metrix.HorizontalSize(pH)},
           ]}>
           {children}
-        </ScrollView>
-      </KeyboardAvoidingView>
+        </View>
+      )}
     </View>
   );
 };

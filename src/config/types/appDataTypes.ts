@@ -35,4 +35,12 @@ export type ContainerProps = {
   handleBackIcon?: () => void;
   scrollViewRef?: React.RefObject<any>;
   onScroll?: (event: any) => void;
+  scrollView: boolean;
+};
+
+export type CategoryCardProps = {
+  item: {
+    id: number;
+    name: string;
+  };
 };

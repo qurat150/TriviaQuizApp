@@ -1,11 +1,9 @@
 import {StyleSheet} from 'react-native';
+import {Metrix} from '../../config';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
+  flatlist: {
+    marginTop: Metrix.VerticalSize(32),
   },
 });
 

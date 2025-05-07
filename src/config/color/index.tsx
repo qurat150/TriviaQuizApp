@@ -2,11 +2,14 @@ const Colors = {
   primary: '#14133F',
   darkblue: '#0C1927',
   white: '#fff',
+  whiteV2: '#F0F0F0',
+  whiteV3: '#F9F9F9',
   black: '#000',
   text: '#000',
   textV2: '#4A4A4A',
   placeholderColor: '#808080',
   greyV2: '#CACACA',
+  greyV4: '#EBEBEB',
   danger: '#FF0944',
 };
 
