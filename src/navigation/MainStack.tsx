@@ -8,7 +8,7 @@ const AppStack = createStackNavigator();
 const MainNavigation = () => {
   return (
     <AppStack.Navigator
-      initialRouteName={'Quiz'}
+      initialRouteName={'CategorySelection'}
       screenOptions={{
         headerShown: false,
         cardStyleInterpolator: ({current, layouts}) => {

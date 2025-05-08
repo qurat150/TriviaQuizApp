@@ -28,7 +28,7 @@ export type ContainerProps = {
   pH?: number;
   children: React.ReactNode;
   headerTitle: string;
-  headerSubText: string;
+  headerSubText?: string;
   backIcon?: boolean;
   contentContainerStyle?: Object;
   backIconHandler?: boolean;
