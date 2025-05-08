@@ -13,6 +13,7 @@ const Colors = {
   greyV4: '#EBEBEB',
   placeholderColor: '#808080',
   danger: '#FF0944',
+  green: '#8BC34A',
 };
 
 export const shadow = {

@@ -19,6 +19,6 @@ export type DifficultySelectionProps = {
   route: RouteProp<AppStackParamList, 'DifficultySelection'>;
 };
 
-export type QuizProps = {
+export type QuizScreenParams = {
   route: RouteProp<AppStackParamList, 'Quiz'>;
 };
