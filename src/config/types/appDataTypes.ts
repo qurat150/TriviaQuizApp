@@ -78,3 +78,12 @@ export type Question = {
   question: string;
   type: string;
 };
+
+export interface CategoryObject {
+  id: number;
+  name: string;
+}
+
+export interface CategoryResponse {
+  trivia_categories: CategoryObject[];
+}

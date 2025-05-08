@@ -1,4 +1,9 @@
-import {CategorySelection, DifficultySelection, Quiz} from '../screens';
+import {
+  CategorySelection,
+  DifficultySelection,
+  Quiz,
+  QuizResult,
+} from '../screens';
 
 const APP_SCREENS = [
   {
@@ -12,6 +17,10 @@ const APP_SCREENS = [
   {
     name: 'Quiz',
     component: Quiz,
+  },
+  {
+    name: 'QuizResult',
+    component: QuizResult,
   },
 ];
 

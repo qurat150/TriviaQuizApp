@@ -6,6 +6,7 @@ import {
   Typography,
   CategoryCard,
   StandardButton,
+  ListEmptyComponent,
 } from '../../components';
 import {Colors, NavigationService} from '../../config';
 import {useQuizCategories} from '../../hooks';
@@ -13,7 +14,7 @@ import styles from './styles';
 
 const CategorySelection = () => {
   const [activeCategory, setActiveCategory] = useState(0);
-  const {data, error, loading} = useQuizCategories();
+  const {data} = useQuizCategories();
 
   return (
     <Container
@@ -38,10 +39,12 @@ const CategorySelection = () => {
         )}
         style={styles.flatlist}
         showsVerticalScrollIndicator={false}
+        contentContainerStyle={{flex: data?.length ? 0 : 1}}
+        ListEmptyComponent={() => <ListEmptyComponent />}
       />
 
       <StandardButton
-        title="Start Quiz"
+        title="Continue"
         onPress={() => {
           NavigationService.navigate('DifficultySelection', {
             id: activeCategory,

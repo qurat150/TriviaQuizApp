@@ -10,6 +10,7 @@ export type RootStackParamList = {
 export type AppStackParamList = {
   Quiz: {id: string; level: string};
   DifficultySelection: {id: string};
+  QuizResultParams: {score: number; totalQuestions: number};
 };
 
 export type NavigationStackType<T extends ParamListBase = RootStackParamList> =
@@ -21,4 +22,8 @@ export type DifficultySelectionProps = {
 
 export type QuizScreenParams = {
   route: RouteProp<AppStackParamList, 'Quiz'>;
+};
+
+export type QuizResultParams = {
+  route: RouteProp<AppStackParamList, 'QuizResultParams'>;
 };

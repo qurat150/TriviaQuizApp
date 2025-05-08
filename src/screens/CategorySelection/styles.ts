@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native';
+
 import {Metrix} from '../../config';
 
 const styles = StyleSheet.create({

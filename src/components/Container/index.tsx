@@ -48,12 +48,16 @@ const Container: React.FC<ContainerProps> = ({
           </TouchableOpacity>
         )}
 
-        <Typography mT={20} color={Colors.white} size={14} bold>
+        <Typography
+          mT={backIcon ? 0 : 20}
+          color={Colors.white}
+          size={backIcon ? 20 : 14}
+          medium>
           {headerTitle}
         </Typography>
 
         {headerSubText && (
-          <Typography mT={6} lineHeight={24} color={Colors.white}>
+          <Typography mT={10} lineHeight={24} size={18} color={Colors.white}>
             {headerSubText}
           </Typography>
         )}

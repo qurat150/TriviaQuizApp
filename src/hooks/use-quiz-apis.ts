@@ -4,14 +4,11 @@ import type {AxiosError} from 'axios';
 import {get} from '../utils/AxiosClient';
 import {API_URLS} from '../utils/Endpoints';
 
-interface CategoryObject {
-  id: number;
-  name: string;
-}
-
-interface CategoryResponse {
-  trivia_categories: CategoryObject[];
-}
+import {
+  CategoryObject,
+  CategoryResponse,
+  Question,
+} from '../config/types/appDataTypes';
 
 export const useQuizCategories = () => {
   const [data, setData] = useState<CategoryObject[]>([]);
@@ -39,7 +36,7 @@ export const useQuizCategories = () => {
 
 export const useQuizQuestions = () => {
   const [questionsFetch, setQuestionsFetch] = useState<{
-    data: CategoryObject[];
+    data: Question[];
     loading: boolean;
     error: AxiosError | unknown;
   }>({

@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {TouchableOpacity, View} from 'react-native';
 
-import {Container, Typography, StandardButton, Flex} from '../../components';
+import {Container, Typography, StandardButton} from '../../components';
 import {Colors, Metrix, NavigationService} from '../../config';
 import {DifficultySelectionProps} from '../../config/types/navigation';
 import {styles} from './styles';
