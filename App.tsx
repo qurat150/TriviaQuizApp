@@ -2,13 +2,18 @@ import React from 'react';
 import {StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 
-import {NavigationService} from './src/config';
+import {Colors, NavigationService} from './src/config';
 import Route from './src';
 
 const App = () => {
   return (
     <React.Fragment>
-      <StatusBar animated translucent={true} />
+      <StatusBar
+        animated
+        translucent={true}
+        barStyle="light-content"
+        backgroundColor={Colors.primary}
+      />
       <NavigationContainer ref={NavigationService.navigationRef}>
         <Route />
       </NavigationContainer>

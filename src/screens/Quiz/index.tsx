@@ -1,11 +1,18 @@
-import {Button, FlatList} from 'react-native';
+import {useState} from 'react';
+import {FlatList} from 'react-native';
 
-import {Container, Typography, CategoryCard} from '../../components';
+import {
+  Container,
+  Typography,
+  CategoryCard,
+  StandardButton,
+} from '../../components';
 import {Colors} from '../../config';
-import {useQuizCategories} from '../../hooks/apis/use-quiz-categories';
+import {useQuizCategories} from '../../hooks';
 import styles from './styles';
 
 const Quiz = () => {
+  const [activeCategory, setActiveCategory] = useState(0);
   const {data, error, loading} = useQuizCategories();
 
   return (
@@ -21,10 +28,19 @@ const Quiz = () => {
       <FlatList
         data={data}
         keyExtractor={item => item.id.toString()}
-        renderItem={({item}) => <CategoryCard item={item} />}
+        renderItem={({item, index}) => (
+          <CategoryCard
+            item={item}
+            index={index}
+            activeCategory={activeCategory}
+            setActiveCategory={setActiveCategory}
+          />
+        )}
         style={styles.flatlist}
         showsVerticalScrollIndicator={false}
       />
+
+      <StandardButton title="Start Quiz" onPress={() => {}} mB={32} />
     </Container>
   );
 };

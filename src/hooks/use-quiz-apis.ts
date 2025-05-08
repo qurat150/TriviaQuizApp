@@ -1,8 +1,8 @@
 import {useEffect, useState} from 'react';
 import type {AxiosError} from 'axios';
 
-import {get} from '../../utils/AxiosClient';
-import {API_URLS} from '../../utils/Endpoints';
+import {get} from '../utils/AxiosClient';
+import {API_URLS} from '../utils/Endpoints';
 
 interface CategoryObject {
   id: number;

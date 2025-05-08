@@ -1,4 +1,4 @@
-import {TextProps, TextStyle} from 'react-native';
+import {TextProps, TextStyle, ViewStyle} from 'react-native';
 
 export interface TypographyProps extends TextProps {
   color?: string;
@@ -43,4 +43,30 @@ export type CategoryCardProps = {
     id: number;
     name: string;
   };
+  index: number;
+  activeCategory: number;
+  setActiveCategory: (activeCategory: number) => void;
+};
+
+export type FlexProps = {
+  mT?: number;
+  mB?: number;
+  children: React.ReactNode;
+  justifyContent?:
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'space-between'
+    | 'space-around'
+    | 'space-evenly';
+  alignItems?:
+    | 'stretch'
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'baseline'
+    | 'stretch';
+  gap?: number;
+  flexWrap?: 'wrap' | 'nowrap';
+  style?: ViewStyle;
 };
