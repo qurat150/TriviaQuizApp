@@ -44,7 +44,7 @@ const CategorySelection = () => {
         title="Start Quiz"
         onPress={() => {
           NavigationService.navigate('DifficultySelection', {
-            categoryId: activeCategory,
+            id: activeCategory,
           });
         }}
         mB={32}

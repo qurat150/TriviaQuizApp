@@ -1,14 +1,20 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {useState} from 'react';
 
-const Quiz = () => {
+import {Container, Typography} from '../../components';
+import {QuizProps} from '../../config/types/navigation';
+import {Colors} from '../../config';
+
+const DifficultySelection = ({route}: QuizProps) => {
+  const {id, level} = route?.params;
+  console.log(id, level);
+
   return (
-    <View>
-      <Text>Quiz</Text>
-    </View>
+    <Container scrollView={false} headerTitle="Trivia Quiz App" backIcon>
+      <Typography mT={32} mB={32} size={18} bold color={Colors.darkblue}>
+        Quiz
+      </Typography>
+    </Container>
   );
 };
 
-export default Quiz;
-
-const styles = StyleSheet.create({});
+export default DifficultySelection;

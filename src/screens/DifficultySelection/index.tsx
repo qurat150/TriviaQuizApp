@@ -13,7 +13,7 @@ const options = [
 ];
 
 const DifficultySelection = ({route}: DifficultySelectionProps) => {
-  const id = route?.params;
+  const {id} = route?.params;
   const [level, setLevel] = useState(options[0].level);
 
   return (
